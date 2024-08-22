@@ -45,7 +45,7 @@ const checkWinner = () => {
   }
 };
 const showWinner = (winner) => {
-  let text = winner ? "Player 1" : "Player 2";
+  let text = winner === "0" ? "Player 1" : "Player 2";
  
   msg.innerText = `Congratulation, Winner is ${text}`;
 
@@ -69,7 +69,7 @@ const enabledBtns = () => {
 const resetGame = () => {
   player0 = true;
   enabledBtns();
-  msgContainer.classList.add(".hide");
+  msgContainer.classList.add("hide");
 };
 
 resetBtn.addEventListener("click", resetGame);
